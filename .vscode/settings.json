@@ -8,9 +8,12 @@
     "statusBar.foreground": "#100030"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
   "stylelint.enable": true,
   "css.validate": false,
   "scss.validate": false,
-  "stylelint.validate": ["scss", ".module.scss"]
+  "stylelint.validate": ["scss", ".module.scss"],
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

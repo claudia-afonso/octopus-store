@@ -27,7 +27,6 @@
   "plugins": ["react", "@typescript-eslint", "css-modules"],
   "rules": {
     "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/indent": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,
     "@typescript-eslint/prefer-interface": 0,
     "@typescript-eslint/camelcase": 0,
@@ -36,6 +35,7 @@
     "@typescript-eslint/no-var-requires": 0,
     "@typescript-eslint/no-explicit-any": "error",
     "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0,
     "space-before-function-paren": 0,
     "strict": 0,
     "template-curly-spacing": "off",
