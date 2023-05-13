@@ -5,7 +5,7 @@ type ApolloProviderProps = {
 }
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql" //process.env.GRAPHQL_URL
+  uri: "http://localhost:3001/graphql"
 })
 
 const client = new ApolloClient({
