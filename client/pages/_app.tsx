@@ -1,7 +1,6 @@
 import type { AppProps } from "next/app"
 import OctopusApolloProvider from "../apollo/apolloClient"
-import "../styles/normalize.css"
-import "../styles/globals.css"
+import "../styles/main.scss"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
