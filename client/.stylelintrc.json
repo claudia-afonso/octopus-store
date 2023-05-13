@@ -1,0 +1,57 @@
+{
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "keyframes-name-pattern": "(^[a-z]|[A-Z0-9])[a-z]*",
+    "selector-class-pattern": [
+      "(^[a-z]|[A-Z0-9])[a-z]*",
+      {
+        "resolveNestedSelectors": false
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global",
+          "local"
+        ]
+      }
+    ],
+    "function-url-scheme-allowed-list": [
+      "data",
+      "/^http/"
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "composes",
+          "compose-with"
+        ]
+      }
+    ],
+    "order/order": [
+      "dollar-variables"
+    ],
+    "order/properties-alphabetical-order": true,
+    "scss/dollar-variable-pattern": [
+      "(^[a-z]|[A-Z0-9])[a-z]*",
+      {
+        "ignore": "global"
+      }
+    ],
+    "scss/at-mixin-pattern": "(^[a-z]|[A-Z0-9])[a-z]*",
+    "scss/percent-placeholder-pattern": "(^[a-z]|[A-Z0-9])[a-z]*"
+  },
+  "ignoreFiles": [
+    "**/*.tsx",
+    "**/*.jsx",
+    "**/*.js"
+  ]
+}
