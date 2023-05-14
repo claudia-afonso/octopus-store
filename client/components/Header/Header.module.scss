@@ -1,0 +1,33 @@
+.header {
+  background-color: var(--siphon);
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: $grid-width;
+  padding: rem(16);
+}
+
+.logoCta {
+  display: flex;
+  max-width: rem(190);
+
+  @include mq(desktop) {
+    max-width: 100%;
+  }
+}
+
+.cartCta {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+}
+
+.ctaContainer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

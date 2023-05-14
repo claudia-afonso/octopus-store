@@ -1,5 +1,6 @@
-/* Octopus Energy brand colours used in the design */
+@import "node_modules/normalize.css/normalize";
 
+/* Octopus Energy brand colours used in the design */
 :root {
   --hemocyanin: #180048;
   --ice: #f0ffff;
@@ -7,7 +8,7 @@
   --purpleHaze: #a49fc8;
   --siphon: #100030;
   --sohoLights: #f050f8;
-  --lightSky: #60f0f8;
+  --voltage: #60f0f8;
 }
 
 html,
@@ -19,7 +20,7 @@ body {
 }
 
 body {
-  background: var(--siphon);
+  background: var(--hemocyanin);
 }
 
 .home {
@@ -29,4 +30,8 @@ body {
   height: 100vh;
   justify-content: center;
   margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
 }

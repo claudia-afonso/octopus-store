@@ -1,0 +1,11 @@
+.footer {
+  margin: 0 auto;
+  max-width: $grid-width;
+  padding: rem(16);
+}
+
+.text {
+  @extend %p;
+
+  color: #f0ffff;
+}

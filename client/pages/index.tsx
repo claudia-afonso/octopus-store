@@ -1,4 +1,5 @@
 import Image from "next/image"
+import styles from "./index.module.scss"
 
 export default function Home() {
   return (
@@ -15,7 +16,10 @@ export default function Home() {
         </figure>
         <h1>Welcome to the Octopus Energy store!</h1>
         <p>
-          Get started by visiting the <code>/product</code> URL and editing <code>client/pages/product.js</code>
+          Get started by visiting our{" "}
+          <a href='product' className={styles.link}>
+            Products page
+          </a>
         </p>
       </div>
     </main>

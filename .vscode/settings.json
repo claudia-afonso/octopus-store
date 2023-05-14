@@ -2,9 +2,9 @@
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#100030",
     "titleBar.inactiveForeground": "#100030",
-    "titleBar.activeBackground": "#600e6b",
-    "titleBar.inactiveBackground": "#a49fc8",
-    "statusBar.background": "#600e6b",
+    "titleBar.activeBackground": "#f050f8",
+    "titleBar.inactiveBackground": "#f050f8",
+    "statusBar.background": "#f050f8",
     "statusBar.foreground": "#100030"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
