@@ -1,0 +1,27 @@
+.counter {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  @extend %micro;
+
+  margin-bottom: rem(4);
+}
+
+.actions {
+  align-items: center;
+  display: flex;
+}
+
+.button {
+  @include Button($size: "small");
+}
+
+.amount {
+  font-size: rem(22);
+  font-weight: 500;
+  margin: rem(0 12);
+}

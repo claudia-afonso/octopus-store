@@ -8,6 +8,7 @@
   --purpleHaze: #a49fc8;
   --siphon: #100030;
   --sohoLights: #f050f8;
+  --sohoLights-light: #fa98ff;
   --voltage: #60f0f8;
 }
 
@@ -20,7 +21,7 @@ body {
 }
 
 body {
-  background: var(--hemocyanin);
+  background: var(--siphon);
 }
 
 .home {

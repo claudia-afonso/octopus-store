@@ -1,11 +1,12 @@
 .footer {
+  background-color: var(--hemocyanin);
   margin: 0 auto;
   max-width: $grid-width;
-  padding: rem(16);
+  padding: rem(12 16);
 }
 
 .text {
-  @extend %p;
+  @extend %micro;
 
-  color: #f0ffff;
+  color: var(--purpleHaze);
 }

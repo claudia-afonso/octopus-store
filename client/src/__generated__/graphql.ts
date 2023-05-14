@@ -45,7 +45,7 @@ export type MutationCreateProductArgs = {
   model_code: Scalars['String'];
   name: Scalars['String'];
   power: Scalars['String'];
-  price: Scalars['Int'];
+  price: Scalars['Float'];
   quantity: Scalars['Int'];
   weight: Scalars['Int'];
   width: Scalars['Float'];
@@ -68,7 +68,7 @@ export type MutationUpdateProductArgs = {
   model_code?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
   power?: InputMaybe<Scalars['String']>;
-  price?: InputMaybe<Scalars['Int']>;
+  price?: InputMaybe<Scalars['Float']>;
   quantity?: InputMaybe<Scalars['Int']>;
   weight?: InputMaybe<Scalars['Int']>;
   width?: InputMaybe<Scalars['Float']>;
@@ -86,7 +86,7 @@ export type Product = {
   model_code: Scalars['String'];
   name: Scalars['String'];
   power: Scalars['String'];
-  price: Scalars['Int'];
+  price: Scalars['Float'];
   quantity: Scalars['Int'];
   weight: Scalars['Int'];
   width: Scalars['Float'];
@@ -122,12 +122,12 @@ export type ProductFilter = {
   name_neq?: InputMaybe<Scalars['String']>;
   power?: InputMaybe<Scalars['String']>;
   power_neq?: InputMaybe<Scalars['String']>;
-  price?: InputMaybe<Scalars['Int']>;
-  price_gt?: InputMaybe<Scalars['Int']>;
-  price_gte?: InputMaybe<Scalars['Int']>;
-  price_lt?: InputMaybe<Scalars['Int']>;
-  price_lte?: InputMaybe<Scalars['Int']>;
-  price_neq?: InputMaybe<Scalars['Int']>;
+  price?: InputMaybe<Scalars['Float']>;
+  price_gt?: InputMaybe<Scalars['Float']>;
+  price_gte?: InputMaybe<Scalars['Float']>;
+  price_lt?: InputMaybe<Scalars['Float']>;
+  price_lte?: InputMaybe<Scalars['Float']>;
+  price_neq?: InputMaybe<Scalars['Float']>;
   q?: InputMaybe<Scalars['String']>;
   quantity?: InputMaybe<Scalars['Int']>;
   quantity_gt?: InputMaybe<Scalars['Int']>;
@@ -160,7 +160,7 @@ export type ProductInput = {
   model_code: Scalars['String'];
   name: Scalars['String'];
   power: Scalars['String'];
-  price: Scalars['Int'];
+  price: Scalars['Float'];
   quantity: Scalars['Int'];
   weight: Scalars['Int'];
   width: Scalars['Float'];
@@ -197,10 +197,10 @@ export type QueryAllProductsArgs = {
 export type Query_ProductsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Query_ProductsQuery = { __typename?: 'Query', allProducts?: Array<{ __typename?: 'Product', id: string, name: string, description: string, price: number } | null> | null };
+export type Query_ProductsQuery = { __typename?: 'Query', allProducts?: Array<{ __typename?: 'Product', id: string, name: string, power: string, description: string, price: number, quantity: number, brand: string, weight: number, height: number, width: number, length: number, model_code: string, colour: string, img_url: string } | null> | null };
 
 
-export const Query_ProductsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"query_products"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allProducts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"price"}}]}}]}}]} as unknown as DocumentNode<Query_ProductsQuery, Query_ProductsQueryVariables>;
+export const Query_ProductsDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"query_products"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allProducts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"name"}},{"kind":"Field","name":{"kind":"Name","value":"power"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"price"}},{"kind":"Field","name":{"kind":"Name","value":"quantity"}},{"kind":"Field","name":{"kind":"Name","value":"brand"}},{"kind":"Field","name":{"kind":"Name","value":"weight"}},{"kind":"Field","name":{"kind":"Name","value":"height"}},{"kind":"Field","name":{"kind":"Name","value":"width"}},{"kind":"Field","name":{"kind":"Name","value":"length"}},{"kind":"Field","name":{"kind":"Name","value":"model_code"}},{"kind":"Field","name":{"kind":"Name","value":"colour"}},{"kind":"Field","name":{"kind":"Name","value":"img_url"}}]}}]}}]} as unknown as DocumentNode<Query_ProductsQuery, Query_ProductsQueryVariables>;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -239,7 +239,7 @@ export type MutationCreateProductArgs = {
   model_code: Scalars['String'];
   name: Scalars['String'];
   power: Scalars['String'];
-  price: Scalars['Int'];
+  price: Scalars['Float'];
   quantity: Scalars['Int'];
   weight: Scalars['Int'];
   width: Scalars['Float'];
@@ -262,7 +262,7 @@ export type MutationUpdateProductArgs = {
   model_code?: InputMaybe<Scalars['String']>;
   name?: InputMaybe<Scalars['String']>;
   power?: InputMaybe<Scalars['String']>;
-  price?: InputMaybe<Scalars['Int']>;
+  price?: InputMaybe<Scalars['Float']>;
   quantity?: InputMaybe<Scalars['Int']>;
   weight?: InputMaybe<Scalars['Int']>;
   width?: InputMaybe<Scalars['Float']>;
@@ -280,7 +280,7 @@ export type Product = {
   model_code: Scalars['String'];
   name: Scalars['String'];
   power: Scalars['String'];
-  price: Scalars['Int'];
+  price: Scalars['Float'];
   quantity: Scalars['Int'];
   weight: Scalars['Int'];
   width: Scalars['Float'];
@@ -316,12 +316,12 @@ export type ProductFilter = {
   name_neq?: InputMaybe<Scalars['String']>;
   power?: InputMaybe<Scalars['String']>;
   power_neq?: InputMaybe<Scalars['String']>;
-  price?: InputMaybe<Scalars['Int']>;
-  price_gt?: InputMaybe<Scalars['Int']>;
-  price_gte?: InputMaybe<Scalars['Int']>;
-  price_lt?: InputMaybe<Scalars['Int']>;
-  price_lte?: InputMaybe<Scalars['Int']>;
-  price_neq?: InputMaybe<Scalars['Int']>;
+  price?: InputMaybe<Scalars['Float']>;
+  price_gt?: InputMaybe<Scalars['Float']>;
+  price_gte?: InputMaybe<Scalars['Float']>;
+  price_lt?: InputMaybe<Scalars['Float']>;
+  price_lte?: InputMaybe<Scalars['Float']>;
+  price_neq?: InputMaybe<Scalars['Float']>;
   q?: InputMaybe<Scalars['String']>;
   quantity?: InputMaybe<Scalars['Int']>;
   quantity_gt?: InputMaybe<Scalars['Int']>;
@@ -354,7 +354,7 @@ export type ProductInput = {
   model_code: Scalars['String'];
   name: Scalars['String'];
   power: Scalars['String'];
-  price: Scalars['Int'];
+  price: Scalars['Float'];
   quantity: Scalars['Int'];
   weight: Scalars['Int'];
   width: Scalars['Float'];
@@ -510,7 +510,7 @@ export type ProductResolvers<ContextType = any, ParentType extends ResolversPare
   model_code?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   power?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  price?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  price?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
   quantity?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   weight?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   width?: Resolver<ResolversTypes['Float'], ParentType, ContextType>;
