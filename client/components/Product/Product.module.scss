@@ -59,6 +59,11 @@
   background-color: var(--hemocyanin);
   margin: rem(0 -16);
   padding: rem(16);
+
+  @include mq(desktop) {
+    margin: 0;
+    padding: rem(16);
+  }
 }
 
 .descriptionContent {

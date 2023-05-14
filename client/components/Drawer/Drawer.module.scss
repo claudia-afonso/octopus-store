@@ -1,0 +1,63 @@
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.drawer {
+  background-color: var(--siphon);
+  bottom: 0;
+  display: none;
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 200ms ease 0s;
+  z-index: 500;
+
+  @include mq(desktop) {
+    left: 55%;
+  }
+
+  &.opened {
+    animation: slide-in-left 300ms;
+    display: block;
+    opacity: 1;
+
+    @include mq(desktop) {
+      &::after {
+        background: rgba(24 0 72 / 50%);
+        bottom: 0;
+        content: "";
+        display: block;
+        left: calc(-100% - 800px);
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: opacity 200ms ease 0s;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.closeWrapper {
+  background-color: var(--hemocyanin);
+  padding: rem(16);
+  text-align: right;
+}
+
+.close {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
