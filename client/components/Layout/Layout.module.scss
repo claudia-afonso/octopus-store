@@ -9,4 +9,9 @@
   margin: 0 auto;
   max-width: $grid-width;
   padding: rem(16);
+  width: 100%;
+
+  @include mq(desktop) {
+    margin: 0 auto rem(16) auto;
+  }
 }

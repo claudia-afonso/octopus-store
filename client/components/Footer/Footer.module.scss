@@ -1,12 +1,17 @@
 .footer {
   background-color: var(--hemocyanin);
-  margin: 0 auto;
-  max-width: $grid-width;
-  padding: rem(12 16);
+  width: 100%;
 }
 
 .text {
   @extend %micro;
 
   color: var(--purpleHaze);
+  margin: 0 auto;
+  max-width: $grid-width;
+  padding: rem(12 16);
+
+  @include mq(desktop) {
+    padding: rem(32 16);
+  }
 }
