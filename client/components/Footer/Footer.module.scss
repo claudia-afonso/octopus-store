@@ -12,6 +12,7 @@
   padding: rem(12 16);
 
   @include mq(desktop) {
+    font-size: rem(16);
     padding: rem(32 16);
   }
 }

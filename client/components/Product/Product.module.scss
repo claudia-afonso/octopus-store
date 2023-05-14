@@ -1,3 +1,15 @@
+.card {
+  @include mq(desktop) {
+    display: flex;
+  }
+}
+
+.cardItems {
+  @include mq(desktop) {
+    flex: 1 0 50%;
+  }
+}
+
 .productInfo {
   display: flex;
   flex-direction: column;

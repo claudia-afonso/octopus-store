@@ -12,6 +12,6 @@
   width: 100%;
 
   @include mq(desktop) {
-    margin: 0 auto rem(16) auto;
+    margin: rem(24) auto rem(24) auto;
   }
 }
