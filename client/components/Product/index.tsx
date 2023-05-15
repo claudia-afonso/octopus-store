@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Product } from "../../src/__generated__/graphql"
-import { useProductCartContext } from "../../pages/product/context/useProductCartContext"
+import { useProductCartContext } from "../context/useProductCartContext"
 import check from "../../public/check.svg"
 import Counter from "../Counter"
 import styles from "./Product.module.scss"

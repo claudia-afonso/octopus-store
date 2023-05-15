@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react"
-import { Product } from "../../../src/__generated__/graphql"
+import { Product } from "../../src/__generated__/graphql"
 
 export type ProductsType = {
   product: Product

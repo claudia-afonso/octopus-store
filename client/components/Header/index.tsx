@@ -2,7 +2,7 @@ import { useState } from "react"
 import Image from "next/image"
 import styles from "./Header.module.scss"
 import icon from "../../public/basket.svg"
-import { useProductCartContext } from "../../pages/product/context/useProductCartContext"
+import { useProductCartContext } from "../context/useProductCartContext"
 import Drawer from "../Drawer"
 
 const Header: React.FC = () => {

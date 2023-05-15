@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react"
 import Image from "next/image"
 import close from "../../public/close.svg"
-import { useProductCartContext } from "../../pages/product/context/useProductCartContext"
+import { useProductCartContext } from "../context/useProductCartContext"
 import Card from "../Card"
 import styles from "./Drawer.module.scss"
 

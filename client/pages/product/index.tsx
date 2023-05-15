@@ -3,7 +3,7 @@ import { Query_ProductsQuery, Product } from "../../src/__generated__/graphql"
 import Loader from "../../components/Loader"
 import Layout from "../../components/Layout"
 import ProductCard from "../../components/Product"
-import { ProductCartContextProvider } from "./context/ProductCartContext"
+import { ProductCartContextProvider } from "../../components/context/ProductCartContext"
 
 export const QUERY_PRODUCTS = gql`
   query query_products {

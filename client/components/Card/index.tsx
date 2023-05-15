@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { ProductsType } from "../../pages/product/context/ProductCart.types"
+import { ProductsType } from "../context/ProductCart.types"
 import styles from "./Card.module.scss"
 
 type CardProps = {
