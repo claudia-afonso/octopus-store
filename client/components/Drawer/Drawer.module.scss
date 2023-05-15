@@ -24,7 +24,7 @@
   z-index: 500;
 
   @include mq(desktop) {
-    left: 55%;
+    left: 65%;
   }
 
   &.opened {
@@ -85,4 +85,24 @@
 
   text-align: center;
   width: 100%;
+}
+
+.fullCart {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-between;
+  padding: rem(24);
+}
+
+.cartProducts {
+  flex: 1 0 100%;
+  margin-bottom: rem(32);
+}
+
+.cartTotal {
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding: rem(8 0);
 }

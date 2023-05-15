@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
   const { products, update } = useProductCartContext()
   const [productAmount, setProductAmount] = useState(1)
   const [animateButton, setAnimateButton] = useState(false)
-  const currentAmount = products.find(p => p.id === data.id)?.amount || 0
+  const currentAmount = products.find(p => p.product.id === data.id)?.amount || 0
 
   const toggleClassName = () => {
     setAnimateButton(true)
@@ -41,7 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
             onClick={() => {
               update([
                 {
-                  id: data.id,
+                  product: data,
                   amount: productAmount + currentAmount
                 }
               ])

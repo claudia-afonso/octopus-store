@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from "react"
 import Image from "next/image"
 import close from "../../public/close.svg"
 import { useProductCartContext } from "../../pages/product/context/useProductCartContext"
+import Card from "../Card"
 import styles from "./Drawer.module.scss"
 
 type DrawerProps = {
@@ -11,6 +12,10 @@ type DrawerProps = {
 
 const Drawer: React.FC<DrawerProps> = ({ isOpen, setIsOpen }) => {
   const { products } = useProductCartContext()
+
+  const total =
+    products.length > 0 &&
+    products.map(product => product.product.price * product.amount).reduce((acc, val) => acc + val)
 
   return (
     <div className={`${styles.drawer} ${isOpen ? styles.opened : ""}`}>
@@ -29,10 +34,16 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, setIsOpen }) => {
           </button>
         </div>
       ) : (
-        <div className={styles.emptyCart}>
-          <h3 className={styles.emptyCartTitle} title='Basket items'>
-            {products[0].amount}
-          </h3>
+        <div className={styles.fullCart}>
+          <div className={styles.cartProducts}>
+            {products.map((product, index) => (
+              <Card product={product} key={index} />
+            ))}
+          </div>
+          <div className={styles.cartTotal}>
+            <p>Total</p>
+            <p>£{total}</p>
+          </div>
           <button onClick={() => setIsOpen(!isOpen)} className={styles.emptyCartCta}>
             Go to checkout
           </button>

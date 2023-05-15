@@ -1,0 +1,16 @@
+.card {
+  background-color: var(--siphon);
+  border: rem(4) solid var(--ink);
+  border-radius: rem(19);
+  display: flex;
+  justify-content: space-between;
+  padding: rem(32);
+}
+
+.image {
+  border-radius: rem(16);
+}
+
+.productDetails {
+  @extend %small;
+}

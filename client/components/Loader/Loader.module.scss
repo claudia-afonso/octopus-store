@@ -9,22 +9,23 @@
 }
 
 .loader {
-  display: inline-block;
-  height: 80px;
+  display: flex;
+  height: rem(80);
+  justify-content: center;
   position: relative;
-  width: 80px;
+  width: 100%;
 
   div {
     animation: loaderAnimation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border: 3px solid var(--sohoLights);
+    border: rem(3) solid var(--sohoLights);
     border-color: var(--sohoLights) transparent transparent;
     border-radius: 50%;
     box-sizing: border-box;
     display: block;
-    height: 40px;
-    margin: 8px;
+    height: rem(40);
+    margin: rem(8);
     position: absolute;
-    width: 40px;
+    width: rem(40);
 
     &:nth-child(1) {
       animation-delay: -0.45s;

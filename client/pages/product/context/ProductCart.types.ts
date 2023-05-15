@@ -1,7 +1,8 @@
 import { Dispatch, SetStateAction } from "react"
+import { Product } from "../../../src/__generated__/graphql"
 
 export type ProductsType = {
-  id: string
+  product: Product
   amount: number
 }
 
