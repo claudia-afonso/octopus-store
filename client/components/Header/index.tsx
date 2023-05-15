@@ -29,7 +29,11 @@ const Header: React.FC = () => {
             <button className={styles.cartCta} onClick={() => setIsOpen(!isOpen)}>
               <Image src={icon} alt='Shopping cart' width={25} height={25} />
             </button>
-            {total > 0 && <label className={styles.badge}>{total}</label>}
+            {total > 0 && (
+              <label className={styles.badge} title='Basket items'>
+                {total}
+              </label>
+            )}
           </div>
         </div>
       </header>

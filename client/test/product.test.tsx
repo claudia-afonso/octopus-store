@@ -1,6 +1,6 @@
 import { MockedProvider } from "@apollo/client/testing"
 import { render, fireEvent, waitFor } from "@testing-library/react"
-import { QUERY_PRODUCTS } from "../pages/product/queries/queries"
+import { QUERY_PRODUCTS } from "../pages/product"
 import Product from "../pages/product"
 
 const mockedData = {
