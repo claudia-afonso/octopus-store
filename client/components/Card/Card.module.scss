@@ -1,16 +1,37 @@
 .card {
+  align-items: flex-start;
   background-color: var(--siphon);
   border: rem(4) solid var(--ink);
   border-radius: rem(19);
   display: flex;
   justify-content: space-between;
-  padding: rem(32);
+  padding: rem(16);
+
+  @include mq(tablet) {
+    padding: rem(32);
+  }
 }
 
 .image {
   border-radius: rem(16);
+
+  @include mq(tablet) {
+    max-width: rem(100);
+  }
+}
+
+.productName {
+  @extend %p;
+
+  margin: rem(0 0 4 0);
 }
 
 .productDetails {
   @extend %small;
+
+  margin: rem(0 0 4 0);
+}
+
+.detailsContainer {
+  margin-left: rem(16);
 }
