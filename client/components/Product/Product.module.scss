@@ -32,12 +32,6 @@
   margin: rem(16 0 8 0);
 }
 
-.button {
-  @include Button;
-
-  margin-bottom: rem(16);
-}
-
 .subtitle {
   @extend %small;
 
@@ -88,4 +82,43 @@
   @extend %small;
 
   flex: 1 0 50%;
+}
+
+.button {
+  @include Button;
+
+  margin-bottom: rem(16);
+  min-height: rem(46);
+  overflow: hidden;
+  position: relative;
+}
+
+.buttonLabel {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+
+  .button.isAdded & {
+    color: transparent;
+    transform: translateX(-100%);
+  }
+}
+
+.buttonIcon {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+
+  .button.isAdded & {
+    transform: translateX(-50%) translateY(-50%);
+  }
 }

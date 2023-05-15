@@ -31,4 +31,19 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.badge {
+  align-items: center;
+  background-color: var(--sohoLights);
+  border-radius: 50%;
+  display: flex;
+  font-size: rem(13);
+  height: rem(20);
+  justify-content: center;
+  position: absolute;
+  right: rem(-8);
+  top: rem(-2);
+  width: rem(20);
 }

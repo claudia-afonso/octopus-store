@@ -1,17 +1,25 @@
+import { useState } from "react"
 import Image from "next/image"
 import { Product } from "../../src/__generated__/graphql"
+import { useProductCartContext } from "../../pages/product/context/useProductCartContext"
+import check from "../../public/check.svg"
 import Counter from "../Counter"
 import styles from "./Product.module.scss"
-import { useProductCartContext } from "../../pages/product/context/useProductCartContext"
-import { useState } from "react"
 
 type ProductCardProps = {
   data: Product
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
-  const { update } = useProductCartContext()
-  const [addProduct, setAddProduct] = useState(1)
+  const { products, update } = useProductCartContext()
+  const [productAmount, setProductAmount] = useState(1)
+  const [animateButton, setAnimateButton] = useState(false)
+  const currentAmount = products.find(p => p.id === data.id)?.amount || 0
+
+  const toggleClassName = () => {
+    setAnimateButton(true)
+    setTimeout(() => setAnimateButton(false), 1000)
+  }
 
   return (
     <div className={styles.card}>
@@ -26,20 +34,24 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         <div className={styles.productInfo}>
           <div className={styles.amount}>
             <p className={styles.price}>£{data.price}</p>
-            <Counter setAddProduct={setAddProduct} addProduct={addProduct} />
+            <Counter setAddProduct={setProductAmount} addProduct={productAmount} />
           </div>
           <button
-            className={styles.button}
-            onClick={() =>
+            className={`${styles.button} ${animateButton && styles.isAdded}`}
+            onClick={() => {
               update([
                 {
                   id: data.id,
-                  amount: addProduct
+                  amount: productAmount + currentAmount
                 }
               ])
-            }
+              toggleClassName()
+            }}
           >
-            Add to cart
+            <span className={styles.buttonLabel}>Add to cart</span>
+            <div className={styles.buttonIcon}>
+              <Image src={check} width={20} height={20} alt='Added to cart' />
+            </div>
           </button>
         </div>
 

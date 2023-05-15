@@ -9,6 +9,8 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { products } = useProductCartContext()
 
+  const total = products.length > 0 && products.map(product => product.amount).reduce((acc, val) => acc + val)
+
   return (
     <>
       <header className={styles.header}>
@@ -27,6 +29,7 @@ const Header: React.FC = () => {
             <button className={styles.cartCta} onClick={() => setIsOpen(!isOpen)}>
               <Image src={icon} alt='Shopping cart' width={25} height={25} />
             </button>
+            {total > 0 && <label className={styles.badge}>{total}</label>}
           </div>
         </div>
       </header>
