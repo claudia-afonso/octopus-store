@@ -18,38 +18,41 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, setIsOpen }) => {
     products.map(product => product.product.price * product.amount).reduce((acc, val) => acc + val)
 
   return (
-    <div className={`${styles.drawer} ${isOpen ? styles.opened : ""}`}>
-      <div className={styles.closeWrapper}>
-        <p className={styles.drawerTitle}>REVIEW YOUR CART</p>
-        <button className={styles.close} onClick={() => setIsOpen(!isOpen)}>
-          <Image src={close} alt='Close' width={18} height={18} />
-        </button>
-      </div>
+    <>
+      <div className={`${styles.drawer} ${isOpen ? styles.opened : ""}`}>
+        <div className={styles.closeWrapper}>
+          <p className={styles.drawerTitle}>REVIEW YOUR CART</p>
+          <button className={styles.close} onClick={() => setIsOpen(!isOpen)}>
+            <Image src={close} alt='Close' width={18} height={18} />
+          </button>
+        </div>
 
-      {products.length === 0 ? (
-        <div className={styles.emptyCart}>
-          <h3 className={styles.emptyCartTitle}>YOUR CART IS CURRENTLY EMPTY.</h3>
-          <button onClick={() => setIsOpen(!isOpen)} className={styles.emptyCartCta}>
-            Shop products
-          </button>
-        </div>
-      ) : (
-        <div className={styles.fullCart}>
-          <div className={styles.cartProducts}>
-            {products.map((product, index) => (
-              <Card product={product} key={index} />
-            ))}
+        {products.length === 0 ? (
+          <div className={styles.emptyCart}>
+            <h3 className={styles.emptyCartTitle}>YOUR CART IS CURRENTLY EMPTY.</h3>
+            <button onClick={() => setIsOpen(!isOpen)} className={styles.emptyCartCta}>
+              Shop products
+            </button>
           </div>
-          <div className={styles.cartTotal}>
-            <p>Total</p>
-            <p>£{total}</p>
+        ) : (
+          <div className={styles.fullCart}>
+            <div className={styles.cartProducts}>
+              {products.map((product, index) => (
+                <Card product={product} key={index} />
+              ))}
+            </div>
+            <div className={styles.cartTotal}>
+              <p>Total</p>
+              <p>£{total}</p>
+            </div>
+            <button onClick={() => setIsOpen(!isOpen)} className={styles.emptyCartCta}>
+              Go to checkout
+            </button>
           </div>
-          <button onClick={() => setIsOpen(!isOpen)} className={styles.emptyCartCta}>
-            Go to checkout
-          </button>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+      <div className={`${styles.backdrop} ${isOpen ? styles.opened : ""}`}></div>
+    </>
   )
 }
 

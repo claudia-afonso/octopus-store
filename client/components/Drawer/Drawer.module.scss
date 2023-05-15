@@ -23,6 +23,10 @@
   transition: opacity 200ms ease 0s;
   z-index: 500;
 
+  @include mq(tablet) {
+    left: 50%;
+  }
+
   @include mq(desktop) {
     left: 65%;
   }
@@ -31,22 +35,7 @@
     animation: slide-in-left 300ms;
     display: block;
     opacity: 1;
-
-    // @include mq(desktop) {
-    //   &::after {
-    //     background: rgba(24 0 72 / 50%);
-    //     bottom: 0;
-    //     content: "";
-    //     display: block;
-    //     left: calc(-100% - 800px);
-    //     opacity: 1;
-    //     position: absolute;
-    //     right: 0;
-    //     top: 0;
-    //     transition: opacity 200ms ease 0s;
-    //     z-index: -1;
-    //   }
-    // }
+    z-index: 500;
   }
 }
 
@@ -105,4 +94,22 @@
   display: flex;
   justify-content: space-between;
   padding: rem(8 0);
+}
+
+.backdrop.opened {
+  @include mq(tablet) {
+    &::after {
+      background: rgba(24 0 72 / 50%);
+      bottom: 0;
+      content: "";
+      display: block;
+      left: calc(-100% - 800px);
+      opacity: 1;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: opacity 200ms ease 0s;
+      z-index: 200;
+    }
+  }
 }
