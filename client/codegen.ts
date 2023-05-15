@@ -5,12 +5,8 @@ const config: CodegenConfig = {
   documents: ["./**/*.tsx"],
   generates: {
     "./src/__generated__/": {
-      preset: "client",
-      plugins: ["typescript", "typescript-resolvers"],
-      presetConfig: {
-        gqlTagName: "gql",
-      }
-    }
+      preset: "client"
+    },
   },
   ignoreNoDocuments: true,
 };

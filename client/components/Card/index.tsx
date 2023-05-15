@@ -7,7 +7,6 @@ type CardProps = {
 }
 
 const Card: React.FC<CardProps> = ({ product }) => {
-  console.log(product)
   return (
     <div>
       <div className={styles.card}>
