@@ -32,21 +32,21 @@
     display: block;
     opacity: 1;
 
-    @include mq(desktop) {
-      &::after {
-        background: rgba(24 0 72 / 50%);
-        bottom: 0;
-        content: "";
-        display: block;
-        left: calc(-100% - 800px);
-        opacity: 1;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transition: opacity 200ms ease 0s;
-        z-index: -1;
-      }
-    }
+    // @include mq(desktop) {
+    //   &::after {
+    //     background: rgba(24 0 72 / 50%);
+    //     bottom: 0;
+    //     content: "";
+    //     display: block;
+    //     left: calc(-100% - 800px);
+    //     opacity: 1;
+    //     position: absolute;
+    //     right: 0;
+    //     top: 0;
+    //     transition: opacity 200ms ease 0s;
+    //     z-index: -1;
+    //   }
+    // }
   }
 }
 
@@ -60,4 +60,21 @@
   background-color: transparent;
   border: 0;
   cursor: pointer;
+}
+
+.emptyCart {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.emptyCartTitle {
+  @extend %h4;
+}
+
+.emptyCartCta {
+  @include Button;
 }

@@ -1,11 +1,13 @@
+import { useState } from "react"
 import Image from "next/image"
 import styles from "./Header.module.scss"
 import icon from "../../public/basket.svg"
+import { useProductCartContext } from "../../pages/product/context/useProductCartContext"
 import Drawer from "../Drawer"
-import { useState } from "react"
 
-export default function Header() {
-  const [isOpen, setIsOpen] = useState<boolean>(true)
+const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const { products } = useProductCartContext()
 
   return (
     <>
@@ -32,3 +34,5 @@ export default function Header() {
     </>
   )
 }
+
+export default Header

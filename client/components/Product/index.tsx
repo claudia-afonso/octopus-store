@@ -1,9 +1,18 @@
 import Image from "next/image"
 import { Product } from "../../src/__generated__/graphql"
-import styles from "./Product.module.scss"
 import Counter from "../Counter"
+import styles from "./Product.module.scss"
+import { useProductCartContext } from "../../pages/product/context/useProductCartContext"
+import { useState } from "react"
 
-export default function ProductCard({ data }: { data: Product }) {
+type ProductCardProps = {
+  data: Product
+}
+
+const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
+  const { update } = useProductCartContext()
+  const [addProduct, setAddProduct] = useState(1)
+
   return (
     <div className={styles.card}>
       <div className={styles.cardItems}>
@@ -17,9 +26,21 @@ export default function ProductCard({ data }: { data: Product }) {
         <div className={styles.productInfo}>
           <div className={styles.amount}>
             <p className={styles.price}>£{data.price}</p>
-            <Counter />
+            <Counter setAddProduct={setAddProduct} addProduct={addProduct} />
           </div>
-          <button className={styles.button}>Add to cart</button>
+          <button
+            className={styles.button}
+            onClick={() =>
+              update([
+                {
+                  id: data.id,
+                  amount: addProduct
+                }
+              ])
+            }
+          >
+            Add to cart
+          </button>
         </div>
 
         <div className={`${styles.section} ${styles.sectionLight}`}>
@@ -54,3 +75,5 @@ export default function ProductCard({ data }: { data: Product }) {
     </div>
   )
 }
+
+export default ProductCard
