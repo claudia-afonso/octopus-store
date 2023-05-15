@@ -23,7 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
 
   return (
     <div className={styles.card}>
-      <div className={styles.cardItems}>
+      <div className={`${styles.cardItems} ${styles.imageCard}`}>
         <Image className={styles.image} src={data.img_url} alt={data.name} width={375} height={375} priority={true} />
       </div>
 
