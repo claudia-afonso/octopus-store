@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         <div className={styles.productInfo}>
           <div className={styles.amount}>
             <p className={styles.price}>£{data.price}</p>
-            <Counter setAddProduct={setProductAmount} addProduct={productAmount} />
+            <Counter setAmount={setProductAmount} amount={productAmount} />
           </div>
           <button
             className={`${styles.button} ${animateButton && styles.isAdded}`}

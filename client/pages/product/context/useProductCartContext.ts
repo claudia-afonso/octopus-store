@@ -6,7 +6,7 @@ export const useProductCartContext = (): ContextType => {
   const context = useContext(ProductCartContext)
 
   if (context === undefined) {
-    console.log("no context") //TODO
+    console.log("no context")
   }
 
   const { products, update } = context

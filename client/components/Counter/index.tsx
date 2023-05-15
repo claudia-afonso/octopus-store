@@ -2,24 +2,26 @@ import { Dispatch, SetStateAction } from "react"
 import styles from "./Counter.module.scss"
 
 type CounterProps = {
-  addProduct: number
-  setAddProduct: Dispatch<SetStateAction<number>>
+  amount: number
+  setAmount: Dispatch<SetStateAction<number>>
 }
 
-const Counter: React.FC<CounterProps> = ({ addProduct, setAddProduct }) => {
+const Counter: React.FC<CounterProps> = ({ amount, setAmount }) => {
   return (
     <div className={styles.counter}>
       <label className={styles.label}>Qty</label>
       <div className={styles.actions}>
         <button
           className={styles.button}
-          onClick={() => setAddProduct(addProduct > 0 ? addProduct - 1 : addProduct)}
-          disabled={addProduct === 1}
+          onClick={() => setAmount(amount > 0 ? amount - 1 : amount)}
+          disabled={amount === 1}
         >
           -
         </button>
-        <p className={styles.amount}>{addProduct}</p>
-        <button className={styles.button} onClick={() => setAddProduct(addProduct + 1)}>
+        <p className={styles.amount} title='Current quantity'>
+          {amount}
+        </p>
+        <button className={styles.button} onClick={() => setAmount(amount + 1)}>
           +
         </button>
       </div>
