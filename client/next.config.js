@@ -8,5 +8,6 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
     prependData: "@import \"main.scss\";"
-  }
+  },
+  distDir: ".next",
 };
