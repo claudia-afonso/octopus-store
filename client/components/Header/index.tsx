@@ -23,13 +23,15 @@ const Header: React.FC = () => {
         <div className={styles.container}>
           <div className={styles.ctaContainer}>
             <Link href='/' className={styles.logoCta} aria-label='Home'>
-              <Image
-                src='https://static.octopuscdn.com/logos/logo.svg'
-                alt='Octopus Energy Logo'
-                width={231}
-                height={33}
-                priority={true}
-              />
+              <a>
+                <Image
+                  src='https://static.octopuscdn.com/logos/logo.svg'
+                  alt='Octopus Energy Logo'
+                  width={231}
+                  height={33}
+                  priority={true}
+                />
+              </a>
             </Link>
           </div>
           <div className={styles.ctaContainer}>

@@ -31,10 +31,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
           width={854}
           height={1008}
           sizes='100vw'
-          style={{
-            width: "100%",
-            height: "auto"
-          }}
           priority={true}
         />
       </div>
