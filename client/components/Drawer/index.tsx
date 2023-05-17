@@ -22,7 +22,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, setIsOpen }) => {
       <div className={`${styles.drawer} ${isOpen ? styles.opened : ""}`}>
         <div className={styles.closeWrapper}>
           <p className={styles.drawerTitle}>REVIEW YOUR CART</p>
-          <button className={styles.close} onClick={() => setIsOpen(!isOpen)}>
+          <button aria-label='Close' className={styles.close} onClick={() => setIsOpen(!isOpen)}>
             <Image src={close} alt='Close' width={18} height={18} />
           </button>
         </div>
@@ -30,7 +30,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, setIsOpen }) => {
         {products.length === 0 ? (
           <div className={styles.emptyCart}>
             <h3 className={styles.emptyCartTitle}>YOUR CART IS CURRENTLY EMPTY.</h3>
-            <button onClick={() => setIsOpen(!isOpen)} className={styles.emptyCartCta}>
+            <button aria-label='Shop products' onClick={() => setIsOpen(!isOpen)} className={styles.emptyCartCta}>
               Shop products
             </button>
           </div>
@@ -45,7 +45,7 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, setIsOpen }) => {
               <p>Total</p>
               <p>£{total}</p>
             </div>
-            <button onClick={() => setIsOpen(!isOpen)} className={styles.emptyCartCta}>
+            <button aria-label='Go to checkout' onClick={() => setIsOpen(!isOpen)} className={styles.emptyCartCta}>
               Go to checkout
             </button>
           </div>

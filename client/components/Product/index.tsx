@@ -49,6 +49,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
             <Counter setAmount={setProductAmount} amount={productAmount} />
           </div>
           <button
+            aria-label='Add to cart'
             className={`${styles.button} ${animateButton && styles.isAdded}`}
             onClick={() => {
               update([
@@ -68,12 +69,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
         </div>
 
         <div className={`${styles.section} ${styles.sectionLight}`}>
-          <h3 className={styles.sectionTitle}>Description</h3>
+          <h2 className={styles.sectionTitle}>Description</h2>
           <p className={styles.descriptionContent}>{data.description}</p>
         </div>
 
         <div className={styles.section}>
-          <h3 className={styles.sectionTitle}>Specifications</h3>
+          <h2 className={styles.sectionTitle}>Specifications</h2>
           <p className={styles.item}>
             <span className={styles.details}>Brand</span>
             <span className={styles.details}>{data.brand}</span>

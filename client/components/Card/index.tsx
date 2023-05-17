@@ -15,7 +15,7 @@ const Card: React.FC<CardProps> = ({ product }) => {
           src={product.product.img_url}
           alt={product.product.name}
           width={70}
-          height={70}
+          height={83}
         />
         <div className={styles.detailsContainer}>
           <p className={styles.productName}>{product.product.name}</p>

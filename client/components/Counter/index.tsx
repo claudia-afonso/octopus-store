@@ -12,6 +12,7 @@ const Counter: React.FC<CounterProps> = ({ amount, setAmount }) => {
       <label className={styles.label}>Qty</label>
       <div className={styles.actions}>
         <button
+          aria-label='Decrease quantity'
           className={styles.button}
           onClick={() => setAmount(amount > 0 ? amount - 1 : amount)}
           disabled={amount === 1}
@@ -21,7 +22,7 @@ const Counter: React.FC<CounterProps> = ({ amount, setAmount }) => {
         <p className={styles.amount} title='Current quantity'>
           {amount}
         </p>
-        <button className={styles.button} onClick={() => setAmount(amount + 1)}>
+        <button aria-label='Increase quantity' className={styles.button} onClick={() => setAmount(amount + 1)}>
           +
         </button>
       </div>

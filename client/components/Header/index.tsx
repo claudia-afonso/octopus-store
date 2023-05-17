@@ -5,6 +5,7 @@ import styles from "./Header.module.scss"
 import icon from "../../public/basket.svg"
 import { useProductCartContext } from "../context/useProductCartContext"
 import Loader from "../Loader"
+import Link from "next/link"
 
 const DynamicDrawer = dynamic(() => import("../Drawer"), {
   loading: () => <Loader />
@@ -21,17 +22,18 @@ const Header: React.FC = () => {
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.ctaContainer}>
-            <a href='/' className={styles.logoCta}>
+            <Link href='/' className={styles.logoCta} aria-label='Home'>
               <Image
                 src='https://static.octopuscdn.com/logos/logo.svg'
                 alt='Octopus Energy Logo'
                 width={231}
                 height={33}
+                priority={true}
               />
-            </a>
+            </Link>
           </div>
           <div className={styles.ctaContainer}>
-            <button className={styles.cartCta} onClick={() => setIsOpen(!isOpen)}>
+            <button aria-label='Shopping cart' className={styles.cartCta} onClick={() => setIsOpen(!isOpen)}>
               <Image src={icon} alt='Shopping cart' width={25} height={25} />
             </button>
             {total > 0 && (

@@ -4,7 +4,11 @@ export default function Document() {
   return (
     <Html lang='en'>
       <Head>
-        <link rel='stylesheet' type='text/css' href='https://static.octopuscdn.com/fonts/Gotham/fonts.min.css' />
+        <link
+          rel='preload stylesheet'
+          type='text/css'
+          href='https://static.octopuscdn.com/fonts/Gotham/fonts.min.css'
+        />
         <link
           rel='icon'
           type='image/png'
