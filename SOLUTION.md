@@ -1,5 +1,19 @@
 # Solution
 
+The project setup remained the same, I've only modified the script to start the project
+
+### Install dependencies
+
+```sh
+cd client && yarn
+```
+
+### Start the app
+
+```sh
+yarn dev
+```
+
 ## Octopus store
 
 This demo includes a preview of the product details page. For which I’ve added on top of the project setup:
