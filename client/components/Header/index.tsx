@@ -1,9 +1,14 @@
 import { useState } from "react"
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import styles from "./Header.module.scss"
 import icon from "../../public/basket.svg"
 import { useProductCartContext } from "../context/useProductCartContext"
-import Drawer from "../Drawer"
+import Loader from "../Loader"
+
+const DynamicDrawer = dynamic(() => import("../Drawer"), {
+  loading: () => <Loader />
+})
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -20,7 +25,7 @@ const Header: React.FC = () => {
               <Image
                 src='https://static.octopuscdn.com/logos/logo.svg'
                 alt='Octopus Energy Logo'
-                width={230}
+                width={231}
                 height={33}
               />
             </a>
@@ -37,7 +42,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </header>
-      <Drawer isOpen={isOpen} setIsOpen={setIsOpen} />
+      <DynamicDrawer isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   )
 }

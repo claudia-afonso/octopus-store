@@ -1,12 +1,13 @@
 .card {
   @include mq(tablet) {
     display: flex;
+    justify-content: space-between;
   }
 }
 
 .cardItems {
   @include mq(tablet) {
-    flex: 1 0 50%;
+    flex: 0 0 50%;
   }
 }
 
@@ -23,14 +24,14 @@
 }
 
 .imageCard {
+  max-width: rem(375);
+
   @include mq(tablet) {
     margin-right: rem(16);
-    max-width: rem(300);
   }
 
   @include mq(desktop) {
     margin-right: 0;
-    max-width: none;
   }
 }
 
