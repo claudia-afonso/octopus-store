@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.ctaContainer}>
-            <a href='#' className={styles.logoCta}>
+            <a href='/' className={styles.logoCta}>
               <Image
                 src='https://static.octopuscdn.com/logos/logo.svg'
                 alt='Octopus Energy Logo'

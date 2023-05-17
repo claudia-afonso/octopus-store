@@ -4,6 +4,7 @@ import Loader from "../../components/Loader"
 import Layout from "../../components/Layout"
 import ProductCard from "../../components/Product"
 import { ProductCartContextProvider } from "../../components/context/ProductCartContext"
+import Head from "next/head"
 
 export const QUERY_PRODUCTS = gql`
   query query_products {
@@ -42,6 +43,9 @@ export default function ProductPage() {
   return (
     <ProductCartContextProvider>
       <Layout>
+        <Head>
+          <title>Products: Octopus Energy store</title>
+        </Head>
         {data.allProducts.map((product: Product, index: number) => (
           <ProductCard data={product} key={index} />
         ))}
