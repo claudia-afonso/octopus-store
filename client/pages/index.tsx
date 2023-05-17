@@ -16,7 +16,7 @@ export default function Home() {
               alt='Octopus Energy Logo'
               width={470}
               height={67}
-              priority={false}
+              priority={true}
             />
           </figure>
           <h1>Welcome to the Octopus Energy store!</h1>
