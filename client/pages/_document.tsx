@@ -11,6 +11,7 @@ export default function Document() {
           href='https://static.octopuscdn.com/favicons/favicon-32x32.png'
           sizes='32x32'
         ></link>
+        <meta name='description' content='Octopus Energy store'></meta>
       </Head>
       <body>
         <noscript>Your browser does not support JavaScript!</noscript>
