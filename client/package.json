@@ -37,7 +37,7 @@
     "normalize.css": "^8.0.1",
     "prettier-eslint": "^15.0.1",
     "sass": "^1.62.1",
-    "stylelint": "^15.6.1",
+    "stylelint": "^15.10.2",
     "stylelint-config-standard-scss": "^9.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-scss": "^5.0.0",
